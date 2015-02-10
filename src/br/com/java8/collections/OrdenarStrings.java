@@ -17,7 +17,7 @@ public class OrdenarStrings {
 		palavras.add("caelum");
 
 		// Collections.sort(palavras, comparador);
-		
+
 		palavras.sort((s1, s2) -> {
 			if (s1.length() < s2.length())
 				return -1;
@@ -39,17 +39,9 @@ public class OrdenarStrings {
 
 		palavras.forEach(t -> System.out.println(t));
 
-		
-		
-		new Thread(new Runnable() {
-
-		    @Override
-		    public void run() {
-		        System.out.println("Executando um Runnable");
-		    }
-
+		new Thread(() -> {
+			System.out.println("Executando um Runnable");
 		}).start();
-		
 
 	}
 }
